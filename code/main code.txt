@@ -1,0 +1,217 @@
+# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define e = Character("Narrator")
+define e = Character("you")
+define e = Character("doctor")
+
+
+
+label start:
+########################################################### The game starts here.
+    play music "water_music.mp3" fadein 1.0 volume 0.5
+    "Narrator" "you wake up it a nice day"
+    scene bg bedroom
+    with fade
+    "Narrator" "you decide to head outside"
+    scene bg to outside
+    with fade
+    scene bg sky
+    with fade    
+    "Narrator" "you were walking when you slipped and fell and were knocked unconscious!"
+    stop music fadeout 1.0
+    scene black
+    with fade
+##########################################-part 2 of start
+    "you" ".........................."
+    play music "night-ambiance-loop.mp3" fadein 1.0 volume 0.5
+    "Narrator" "when you woke up you were in a mysterious all white room with one door"
+    scene bg room1
+    with fade 
+    "you" ".........................."
+    "Narrator" "you turn around and see a door way"
+    scene bg turnaround 
+    with fade
+######################################### GO THOUGH DOOR OR SLEEP
+    menu:
+        "walk though the door":
+            jump choices1_a
+        "sleep":
+            jump choices1_b
+    
+    label choices1_a:
+        "Narrator" "you walk through the door way"
+    scene bg path1
+    with fade
+################################################# RIGHT OR LEFT
+    "you" ".........................."
+    "Narrator" "there only right or left?"
+    menu:
+        "right":
+            jump choices2_a
+        "left":
+            jump choices2_b
+###############################################################-2room to the right-right or left   
+    label choices2_a:
+        "Narrator" "you walk though the door to the right"
+        scene bg room man
+        with fade
+        "Narrator" "there only right or left?"
+    menu:
+        "right":
+            jump choices3_a
+        "left":
+            jump choices3_b
+##################################################################-left or right-room3
+    #######-right
+    label choices3_a:
+        "Narrator" "you run though the door to the right just as the man start to get close to you the door lock itself!"
+        scene bg rightpart2
+        with fade
+        "Narrator" "you walk the the door in front of you as gas rise up and knocked unconscious!"
+        scene black
+        with fade
+        stop music fadeout 1.0
+        play music "water_music.mp3" fadein 1.0 volume 0.5
+        "you" "......................"
+        scene bg bedroom
+        with fade
+        "Narrator" "you wake up in your room was it a dream?"
+        "you" "ahhhhhhhhhhhhhhhhhhh"
+        scene bg death left
+        with fade
+        stop music fadeout 1.0
+        play music "creepy-detuned-arp.mp3" fadein 1.0 volume 0.5
+        "Narrator" "what wrong?"
+        "you" "what is that voice"
+        "Narrator" "????????????"
+        "Narrator" "you can hear me?"
+        "you" "what the hell are you?"
+        "Narrator" "..............."
+        scene bg bedroom
+        with fade
+        "you" "what the F###?"
+        "you" "im going outside for some fresh air"
+        scene bg run
+        with fade
+        "you" "what the hell is that white thing?"
+        "Narrator" "run now!"
+        "Narrator" "you run back to room"
+        stop music fadeout 1.0
+        play music "water_music.mp3" fadein 1.0 volume 0.5
+        scene bg bedroom
+        with fade
+        "you" "ok what the hell is that thing and why did my door go to there"
+        "Narrator" "i don't know their name but they well take your skin and wear it while you're alive"
+        "you" "hell no can they get though the door?"
+        "Narrator" "no"
+        "you" "then im going to sleep i can't deal with all this"
+        scene black
+        with fade
+        "you" "mmmmmmmmmmmmmmmmmmmm"
+        scene bg bedroom
+        with fade
+        "you" "hey you there"
+        "........................."
+        "you" "what going on"
+        "you" "let see what happens when i open the door"
+        scene bg to outside
+        with fade
+        "you" "there no monster"
+        "you" "im going to hospital"
+        scene bg hp
+        with fade
+        scene bg hp hall
+        with fade
+        scene bg hp room
+        with fade
+        "doctor" "sir you have severe brain damage it like something is eating it"
+        "doctor" "you have a few months left"
+        "Narrator" "completion of the room on the right route"
+        
+    menu:
+        "Go to Main Menu":
+            $ renpy.full_restart()
+#######-left-room3
+    label choices3_b:
+        stop music fadeout 1.0
+        play music "christislord.mp3" fadein 1.0 volume 0.5
+        scene bg death right
+        with fade
+        "Narrator" "you try to walk though the door to the left when you are grabe by the man and stabbed"
+        "Narrator" "you bleed out"
+        "Narrator" "you have die"
+    menu:
+        "Go to Main Menu":
+
+            $ renpy.full_restart()
+    label choices3_common:
+################################################################-2room to left-    
+    label choices2_b:
+        stop music fadeout 1.0
+        play music "scary-music-box-for-spooky-scenes.mp3" fadein 1.0 volume 0.5
+        "Narrator" "you walk though the door to the left"
+        scene bg left room1
+        with fade
+        scene bg left room2
+        with fade
+        "Narrator" "you turn around to see that the door way change"
+        scene bg left room3
+        with fade
+        "Narrator" "you walk though the door way"
+        scene bg left room4
+        with fade
+        "Narrator" "you see a door"
+        "Narrator" "you go though the door"
+        scene bg left room5
+        with fade
+        "Narrator" "you run out the door then the change in frount of you're eyes"
+        scene bg left room6
+        with fade
+        "Narrator" "a new monster appears"
+        "Narrator" "in a flash it put it arm though you chest"
+        "Narrator" "you have die"
+        "Narrator" "completion of the left room route"
+    menu:
+        "Go to Main Menu":
+
+            $ renpy.full_restart()
+
+    
+    label choices2_common:
+###################################################### ending for sleeping  
+    label choices1_b:
+        stop music fadeout 1.0
+        play music "church-bpm.mp3" fadein 1.0 volume 0.5
+        "Narrator" "you start to sleep"
+        scene black
+        with fade
+        "Narrator" "you wake up in a forest"
+        scene bg forest
+        with fade
+        "Narrator" "you start wakeing when you feel a sharp pain in the right side of you'r stomach"
+        "Narrator" "you head to the nearst hospital"
+        scene bg hp
+        with fade
+        "Narrator" "you walk the the door to the emergencyh room were you check in"
+        scene bg hp hall
+        with fade
+        "Narrator" "you start walk to the room the nurse told you to go to"
+        scene bg hp room
+        with fade
+        "Narrator" "the doctor checks you out"
+        scene bg scar
+        with fade
+        "Narrator" "you are missing your right kidney"
+        "Narrator" "completion of the sleep route"
+###########################################################-back to main menu
+        label game_scene:
+    menu:
+        "Go to Main Menu":
+            $ renpy.full_restart()
+
+label choices1_common:
+
+    return
