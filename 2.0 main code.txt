@@ -12,42 +12,42 @@ define e = Character("doctor")
 label start:
 ########################################################### The game starts here.
     play music "water_music.mp3" fadein 1.0 volume 0.5
-    "Narrator" "you wake up it a nice day"
+    "Narrator" "You wake up and it's a nice day"
     scene bg bedroom
     with fade
-    "Narrator" "you decide to head outside"
+    "Narrator" "You decide to head outside"
     scene bg to outside
     with fade
     scene bg sky
     with fade    
-    "Narrator" "you were walking when you slipped and fell and were knocked unconscious!"
+    "Narrator" "You were walking, when you slipped and fell and were knocked unconscious!"
     stop music fadeout 1.0
     scene black
     with fade
 ##########################################-part 2 of start
     "you" ".........................."
     play music "night-ambiance-loop.mp3" fadein 1.0 volume 0.5
-    "Narrator" "when you woke up you were in a mysterious all white room with one door"
+    "Narrator" "When you woke up, you were in a mysterious all white room with one door"
     scene bg room1
     with fade 
     "you" ".........................."
-    "Narrator" "you turn around and see a door way"
+    "Narrator" "You turn around and see a doorway"
     scene bg turnaround 
     with fade
 ######################################### GO THOUGH DOOR OR SLEEP
     menu:
-        "walk though the door":
+        "Walk though the door":
             jump choices1_a
-        "sleep":
+        "Sleep":
             jump choices1_b
     
     label choices1_a:
-        "Narrator" "you walk through the door way"
+        "Narrator" "You walk through the doorway"
     scene bg path1
     with fade
 ################################################# RIGHT OR LEFT
     "you" ".........................."
-    "Narrator" "there only right or left?"
+    "Narrator" "Are you going to go right or left?"
     menu:
         "right":
             jump choices2_a
@@ -55,10 +55,10 @@ label start:
             jump choices2_b
 ###############################################################-2room to the right-right or left   
     label choices2_a:
-        "Narrator" "you walk though the door to the right"
+        "Narrator" "You walk though the door to the right"
         scene bg room man
         with fade
-        "Narrator" "there only right or left?"
+        "Narrator" "Are you going to the right or left?"
     menu:
         "right":
             jump choices3_a
@@ -67,10 +67,10 @@ label start:
 ##################################################################-left or right-room3
     #######-right
     label choices3_a:
-        "Narrator" "you run though the door to the right just as the man start to get close to you the door lock itself!"
+        "Narrator" "You run though the door to the right just as the man started to get close to you, the door locks itself!"
         scene bg rightpart2
         with fade
-        "Narrator" "you walk the the door in front of you as gas rise up and knocked unconscious!"
+        "Narrator" "You walk to the the door in front of you as gas rises up and you are knocked unconscious!"
         scene black
         with fade
         stop music fadeout 1.0
@@ -78,58 +78,60 @@ label start:
         "you" "......................"
         scene bg bedroom
         with fade
-        "Narrator" "you wake up in your room was it a dream?"
-        "you" "ahhhhhhhhhhhhhhhhhhh"
+        "Narrator" "You wake up in your room"
+        "Narrator" "Was it a dream?"
+        "you" "AHHHHHHHHHHHHH!"
         scene bg death left
         with fade
         stop music fadeout 1.0
         play music "creepy-detuned-arp.mp3" fadein 1.0 volume 0.5
-        "Narrator" "what wrong?"
-        "you" "what is that voice"
+        "Narrator" "What is wrong?"
+        "you" "Who is that voice?"
         "Narrator" "????????????"
-        "Narrator" "you can hear me?"
-        "you" "what the hell are you?"
+        "Narrator" "You can hear me?"
+        "you" "What the HELL! are you?"
         "Narrator" "..............."
         scene bg bedroom
         with fade
-        "you" "what the F###?"
-        "you" "im going outside for some fresh air"
+        "you" "What the F###?"
+        "you" "I'm going outside for some fresh air"
         scene bg run
         with fade
-        "you" "what the hell is that white thing?"
-        "Narrator" "run now!"
-        "Narrator" "you run back to room"
+        "you" "What the hell is that white thing?"
+        "Narrator" "RUN NOW!"
+        "Narrator" "You, run back to room"
         stop music fadeout 1.0
         play music "water_music.mp3" fadein 1.0 volume 0.5
         scene bg bedroom
         with fade
-        "you" "ok what the hell is that thing and why did my door go to there"
-        "Narrator" "i don't know their name but they well take your skin and wear it while you're alive"
-        "you" "hell no can they get though the door?"
-        "Narrator" "no"
-        "you" "then im going to sleep i can't deal with all this"
+        "you" "Ok, what the hell is that thing and why did my door go to there?"
+        "Narrator" "I don't know their name, but they will take your skin and wear it while you're alive"
+        "you" "Hell no! Can they get though the door?"
+        "Narrator" "No"
+        "you" "Then, I'm going to sleep"
+        "you" "I can't deal with all this!"
         scene black
         with fade
         "you" "mmmmmmmmmmmmmmmmmmmm"
         scene bg bedroom
         with fade
-        "you" "hey you there"
+        "you" "Hey you there"
         "........................."
-        "you" "what going on"
-        "you" "let see what happens when i open the door"
+        "you" "What's going on"
+        "you" "Let's see what happens when I open the door"
         scene bg to outside
         with fade
-        "you" "there no monster"
-        "you" "im going to hospital"
+        "you" "There's no monster"
+        "you" "I'm going to hospital"
         scene bg hp
         with fade
         scene bg hp hall
         with fade
         scene bg hp room
         with fade
-        "doctor" "sir you have severe brain damage it like something is eating it"
-        "doctor" "you have a few months left"
-        "Narrator" "completion of the room on the right route"
+        "doctor" "Sir, you have severe brain damage like something is eating your brain"
+        "doctor" "You have a few months left to live"
+        "Narrator" "You have completed the room on the right route"
         
     menu:
         "Go to Main Menu":
@@ -140,9 +142,9 @@ label start:
         play music "christislord.mp3" fadein 1.0 volume 0.5
         scene bg death right
         with fade
-        "Narrator" "you try to walk though the door to the left when you are grabe by the man and stabbed"
-        "Narrator" "you bleed out"
-        "Narrator" "you have die"
+        "Narrator" "You try to walk though the door to the left, then you are grabbed by the man and stabbed"
+        "Narrator" "You bleed out"
+        "Narrator" "You have died"
     menu:
         "Go to Main Menu":
 
@@ -152,28 +154,28 @@ label start:
     label choices2_b:
         stop music fadeout 1.0
         play music "scary-music-box-for-spooky-scenes.mp3" fadein 1.0 volume 0.5
-        "Narrator" "you walk though the door to the left"
+        "Narrator" "You walk though the door to the left"
         scene bg left room1
         with fade
         scene bg left room2
         with fade
-        "Narrator" "you turn around to see that the door way change"
+        "Narrator" "You turn around to see that the doorway change"
         scene bg left room3
         with fade
-        "Narrator" "you walk though the door way"
+        "Narrator" "You walk though the doorway"
         scene bg left room4
         with fade
-        "Narrator" "you see a door"
-        "Narrator" "you go though the door"
+        "Narrator" "You see a door"
+        "Narrator" "You go though the door"
         scene bg left room5
         with fade
-        "Narrator" "you run out the door then the change in frount of you're eyes"
+        "Narrator" "You run out the door then the room changes in front of your eyes"
         scene bg left room6
         with fade
-        "Narrator" "a new monster appears"
-        "Narrator" "in a flash it put it arm though you chest"
-        "Narrator" "you have die"
-        "Narrator" "completion of the left room route"
+        "Narrator" "A new monster appears"
+        "Narrator" "In a flash, the monster put it's arm though you chest"
+        "Narrator" "You have died"
+        "Narrator" "Completion of the left room route"
     menu:
         "Go to Main Menu":
 
@@ -185,27 +187,27 @@ label start:
     label choices1_b:
         stop music fadeout 1.0
         play music "church-bpm.mp3" fadein 1.0 volume 0.5
-        "Narrator" "you start to sleep"
+        "Narrator" "You fall asleep"
         scene black
         with fade
-        "Narrator" "you wake up in a forest"
+        "Narrator" "You wake up in a forest"
         scene bg forest
         with fade
-        "Narrator" "you start wakeing when you feel a sharp pain in the right side of you'r stomach"
-        "Narrator" "you head to the nearst hospital"
+        "Narrator" "You start waking up when you feel a sharp pain in the right side of you'r stomach"
+        "Narrator" "You head to the nearst hospital"
         scene bg hp
         with fade
-        "Narrator" "you walk the the door to the emergencyh room were you check in"
+        "Narrator" "You walk though the door to the emergency room and are you checked in"
         scene bg hp hall
         with fade
-        "Narrator" "you start walk to the room the nurse told you to go to"
+        "Narrator" "You start walking to the room that the nurse told you to go to"
         scene bg hp room
         with fade
-        "Narrator" "the doctor checks you out"
+        "Narrator" "The doctor checks you out"
         scene bg scar
         with fade
-        "Narrator" "you are missing your right kidney"
-        "Narrator" "completion of the sleep route"
+        "Narrator" "You are missing your right kidney"
+        "Narrator" "Completion of the sleep route"
 ###########################################################-back to main menu
         label game_scene:
     menu:
